@@ -82,6 +82,28 @@ p {
   margin-bottom: 18px;
 }
 
+.rating-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--deep-red-dark);
+  background: rgba(224, 168, 39, 0.18);
+  padding: 8px 16px;
+  border-radius: 999px;
+  margin-bottom: 18px;
+}
+
+.rating-badge svg {
+  width: 16px;
+  height: 16px;
+  color: var(--turmeric-dark);
+  flex-shrink: 0;
+}
+
 /* ---------- Header ---------- */
 .site-header {
   position: sticky;
@@ -397,6 +419,28 @@ section {
 .placeholder-note {
   font-size: 0.85rem;
   color: rgba(251, 242, 228, 0.65);
+}
+
+.contact-detail {
+  color: rgba(251, 242, 228, 0.9);
+}
+
+.tel-link {
+  color: var(--mustard);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.contact-note {
+  font-size: 0.9rem;
+  color: rgba(251, 242, 228, 0.85);
+  line-height: 1.5;
+}
+
+.note-sub {
+  font-size: 0.78rem;
+  color: rgba(251, 242, 228, 0.6);
 }
 
 .map-link {
