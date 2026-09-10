@@ -1,295 +1,336 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ezo Imbiss u. Lebensmittel</title>
-<meta name="description" content="Website-Entwurf für Ezo Imbiss u. Lebensmittel in Freiburg im Breisgau – Imbiss und Lebensmittelladen in der Rheinstraße.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;700&family=Mulish:wght@700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ezo Imbiss u. Lebensmittel — Rheinstraße 17, Freiburg-Neuburg</title>
+<meta name="description" content="Ezo Imbiss und Lebensmittel, Rheinstraße 17 in Freiburg-Neuburg: Döner, Dürüm, Pide, Falafel und hausgemachte Sarma an der Theke, dazu ein Lebensmittelladen — Montag bis Samstag von 9 bis 22 Uhr." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='16' height='32' fill='%23d2432f'/%3E%3Crect x='16' width='16' height='32' fill='%2317544f'/%3E%3Cpath d='M16 4v24' stroke='%23fbf8f2' stroke-width='2'/%3E%3C/svg%3E" />
 </head>
 <body>
 
-<header class="site-header">
-  <div class="container">
-    <a class="brand" href="#top">
-      <svg class="brand-mark" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <circle cx="24" cy="24" r="22" fill="url(#markGrad)"/>
-        <path d="M14 27c0-5.5 4.5-10 10-10s10 4.5 10 10" stroke="#FBF2E4" stroke-width="2.4" stroke-linecap="round"/>
-        <path d="M13 27h22a2 2 0 0 1 2 2v1a3 3 0 0 1-3 3H14a3 3 0 0 1-3-3v-1a2 2 0 0 1 2-2Z" fill="#FBF2E4"/>
-        <path d="M20 15.5c0-1.4.9-2 .9-3.3M24 14.5c0-1.4.9-2 .9-3.3M28 15.5c0-1.4.9-2 .9-3.3" stroke="#FBF2E4" stroke-width="1.6" stroke-linecap="round"/>
-        <defs>
-          <linearGradient id="markGrad" x1="2" y1="2" x2="46" y2="46" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#E0A827"/>
-            <stop offset="1" stop-color="#9C2B1F"/>
-          </linearGradient>
-        </defs>
+<a class="skip-link" href="#main">Direkt zum Inhalt</a>
+
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top" aria-label="Ezo Imbiss u. Lebensmittel — Start">
+      <svg class="brand-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+        <rect width="19" height="40" rx="3" fill="#d2432f" />
+        <rect x="21" width="19" height="40" rx="3" fill="#17544f" />
+        <path d="M9.5 12v16M30.5 12v16" stroke="#fbf8f2" stroke-width="2.6" stroke-linecap="round" />
       </svg>
-      Ezo Imbiss u. Lebensmittel
+      <span class="brand-text">
+        <span class="brand-name">Ezo</span>
+        <span class="brand-sub">Imbiss u. Lebensmittel · Rheinstraße 17</span>
+      </span>
     </a>
-    <nav class="site-nav" aria-label="Hauptnavigation">
-      <a href="#ueber-uns">Über uns</a>
-      <a href="#highlights">Angebot</a>
-      <a href="#kontakt">Kontakt</a>
+
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mainNav">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="site-nav" id="mainNav" aria-label="Hauptnavigation">
+      <ul>
+        <li><a href="#theke">An der Theke</a></li>
+        <li><a href="#regal">Im Regal</a></li>
+        <li><a href="#spaet">Bis 22 Uhr</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
     </nav>
-    <a class="btn btn-ghost nav-cta" href="#kontakt">Kontakt</a>
+
+    <span class="header-status" id="headerStatus" hidden></span>
   </div>
 </header>
 
-<main id="top">
-  <!-- HERO -->
+<main id="main">
+
+  <!-- ================= HERO =================
+       Der Laden ist zwei Betriebe unter einem Dach. Der alte Entwurf
+       schrieb das ("Zwei Welten, ein Laden") und machte daraus dann
+       vier gleiche Kacheln. Hier trägt die Zweiteilung das Layout:
+       links die Theke, rechts das Regal, dazwischen eine Trennlinie,
+       die durch die ganze Seite läuft. -->
   <section class="hero">
-    <div class="container">
-      <div class="hero-copy">
-        <span class="eyebrow">Rheinstraße 17 · Freiburg im Breisgau-Neuburg</span>
-        <div class="rating-badge">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6.2 6.8.7-5.1 4.6 1.5 6.7L12 17.3l-6.1 3.4 1.5-6.7-5.1-4.6 6.8-.7L12 2.5Z"/></svg>
-          4,4 · 247 Google-Bewertungen
+    <div class="wrap">
+      <p class="eyebrow">Rheinstraße 17 · Freiburg-Neuburg</p>
+      <h1>Links essen.<br />Rechts einkaufen.</h1>
+      <p class="hero-lead">
+        Ein Laden, zwei Anlässe: An der Theke gibt es Döner, Dürüm, Pide und
+        hausgemachte Sarma. Zwei Schritte weiter steht das Regal mit dem, was
+        zu Hause fehlt. Montag bis Samstag, von neun bis zweiundzwanzig Uhr.
+      </p>
+
+      <div class="hero-meta">
+        <div class="status-badge" id="statusBadge" hidden>
+          <span class="status-dot" aria-hidden="true"></span>
+          <span id="statusText"></span>
         </div>
-        <h1 class="hero-claim">Frisch zubereitet, <span class="accent">herzlich serviert.</span></h1>
-        <p class="hero-lede">
-          Ezo Imbiss u. Lebensmittel verbindet den schnellen herzhaften Snack für unterwegs –
-          Döner, Dürüm, Pide und Falafel – mit einem kleinen Lebensmittelladen für den
-          täglichen Einkauf, mitten in Freiburg-Neuburg.
+        <p class="hero-rating">
+          <span class="stars" aria-hidden="true">★★★★<span class="dim">★</span></span>
+          <strong>4,4 von 5</strong> · 247 Google-Bewertungen
         </p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#kontakt">
-            Kontakt aufnehmen
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-          <a class="btn btn-ghost" href="#highlights">Was uns ausmacht</a>
-        </div>
       </div>
 
-      <div class="hero-art" aria-hidden="true">
-        <svg viewBox="0 0 420 380" xmlns="http://www.w3.org/2000/svg" role="img">
-          <defs>
-            <linearGradient id="heroBowl" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0" stop-color="#E0A827"/>
-              <stop offset="1" stop-color="#9C2B1F"/>
-            </linearGradient>
-            <linearGradient id="heroAwning1" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0" stop-color="#D97E1E"/>
-              <stop offset="1" stop-color="#B8630F"/>
-            </linearGradient>
-          </defs>
+      <!-- Der Laden im Aufriss: Theke links, Regal rechts. -->
+      <div class="shopfront" aria-hidden="true">
+        <svg viewBox="0 0 900 300" preserveAspectRatio="xMidYMid meet">
+          <rect width="900" height="300" fill="#f2ece1" />
 
-          <!-- soft backdrop -->
-          <circle cx="220" cy="190" r="170" fill="#F6E8D4"/>
+          <!-- linke Hälfte: Imbiss -->
+          <rect width="448" height="300" fill="#fbe6e0" />
+          <!-- Theke -->
+          <rect x="36" y="196" width="376" height="70" rx="6" fill="#d2432f" />
+          <rect x="36" y="186" width="376" height="14" rx="7" fill="#a8341f" />
+          <!-- Spieß -->
+          <rect x="120" y="52" width="10" height="136" rx="5" fill="#8a8f8c" />
+          <path d="M125 66c26 0 40 24 40 52s-14 62-40 62-40-34-40-62 14-52 40-52z" fill="#c9762f" />
+          <g stroke="#a5551d" stroke-width="3" opacity=".6"><path d="M88 106h74M86 132h78M88 158h74" /></g>
+          <!-- Pide-Blech -->
+          <g transform="translate(230,120)">
+            <path d="M0 40c22-30 130-30 152 0-22 30-130 30-152 0z" fill="#e8c98a" stroke="#b8873f" stroke-width="3" />
+            <g fill="#7a9a4a"><ellipse cx="52" cy="40" rx="14" ry="7" /><ellipse cx="100" cy="40" rx="14" ry="7" /></g>
+          </g>
+          <!-- Sarma-Rollen -->
+          <g transform="translate(292,214)">
+            <g fill="#4f7a3c" stroke="#2f5124" stroke-width="2.4">
+              <rect width="76" height="16" rx="8" />
+              <rect y="22" width="76" height="16" rx="8" />
+            </g>
+          </g>
 
-          <!-- striped awning -->
+          <!-- rechte Hälfte: Lebensmittel -->
+          <rect x="452" width="448" height="300" fill="#e2efec" />
+          <!-- Regale -->
           <g>
-            <path d="M60 120 L360 120 L340 70 L80 70 Z" fill="#FFFDF9"/>
-            <path d="M60 120 L360 120 L340 70 L80 70 Z" fill="url(#heroAwning1)" opacity="0.9"/>
-            <g stroke="#FFFDF9" stroke-width="10">
-              <line x1="100" y1="70" x2="82" y2="120"/>
-              <line x1="140" y1="70" x2="128" y2="120"/>
-              <line x1="180" y1="70" x2="174" y2="120"/>
-              <line x1="220" y1="70" x2="220" y2="120"/>
-              <line x1="260" y1="70" x2="266" y2="120"/>
-              <line x1="300" y1="70" x2="312" y2="120"/>
-              <line x1="340" y1="70" x2="358" y2="120"/>
-            </g>
+            <rect x="500" y="72" width="356" height="10" rx="4" fill="#17544f" />
+            <rect x="500" y="150" width="356" height="10" rx="4" fill="#17544f" />
+            <rect x="500" y="228" width="356" height="10" rx="4" fill="#17544f" />
+            <rect x="500" y="256" width="356" height="10" rx="4" fill="#0f3b37" />
+          </g>
+          <!-- Waren -->
+          <g>
+            <rect x="516" y="34" width="30" height="38" rx="3" fill="#e0a92c" />
+            <rect x="556" y="42" width="26" height="30" rx="3" fill="#d2432f" />
+            <rect x="592" y="30" width="34" height="42" rx="3" fill="#4f7a3c" />
+            <circle cx="654" cy="56" r="16" fill="#c9762f" />
+            <rect x="686" y="38" width="28" height="34" rx="3" fill="#e0a92c" />
+            <rect x="724" y="46" width="30" height="26" rx="3" fill="#7a5a34" />
+            <rect x="768" y="32" width="26" height="40" rx="3" fill="#d2432f" />
+            <rect x="806" y="44" width="34" height="28" rx="3" fill="#4f7a3c" />
+
+            <rect x="516" y="116" width="34" height="34" rx="3" fill="#4f7a3c" />
+            <circle cx="576" cy="134" r="16" fill="#e0a92c" />
+            <rect x="606" y="112" width="26" height="38" rx="3" fill="#d2432f" />
+            <rect x="646" y="122" width="34" height="28" rx="3" fill="#7a5a34" />
+            <rect x="694" y="110" width="28" height="40" rx="3" fill="#c9762f" />
+            <rect x="736" y="120" width="32" height="30" rx="3" fill="#4f7a3c" />
+            <rect x="782" y="114" width="26" height="36" rx="3" fill="#e0a92c" />
+            <rect x="820" y="124" width="24" height="26" rx="3" fill="#d2432f" />
+
+            <rect x="520" y="192" width="36" height="36" rx="3" fill="#c9762f" />
+            <rect x="570" y="200" width="30" height="28" rx="3" fill="#4f7a3c" />
+            <rect x="614" y="188" width="26" height="40" rx="3" fill="#e0a92c" />
+            <circle cx="672" cy="210" r="18" fill="#d2432f" />
+            <rect x="706" y="196" width="34" height="32" rx="3" fill="#7a5a34" />
+            <rect x="756" y="186" width="28" height="42" rx="3" fill="#4f7a3c" />
+            <rect x="800" y="198" width="36" height="30" rx="3" fill="#e0a92c" />
           </g>
 
-          <!-- stall body -->
-          <rect x="80" y="120" width="260" height="120" rx="6" fill="#FFFDF9" stroke="#E7D3B4" stroke-width="2"/>
-          <rect x="80" y="120" width="260" height="22" fill="#9C2B1F"/>
-          <rect x="96" y="160" width="228" height="60" rx="8" fill="#F6E8D4"/>
-
-          <!-- grocery basket -->
-          <g transform="translate(122,168)">
-            <path d="M4 20 L60 20 L52 46 L12 46 Z" fill="#D97E1E"/>
-            <path d="M4 20 L60 20 L57 27 L7 27 Z" fill="#B8630F"/>
-            <path d="M16 20 C16 4 48 4 48 20" stroke="#7A2018" stroke-width="4" fill="none" stroke-linecap="round"/>
-            <circle cx="24" cy="12" r="6" fill="#E0A827"/>
-            <circle cx="36" cy="8" r="7" fill="#9C2B1F"/>
-            <circle cx="46" cy="14" r="5.5" fill="#D97E1E"/>
-          </g>
-
-          <!-- skewer / snack -->
-          <g transform="translate(210,170)">
-            <line x1="0" y1="34" x2="46" y2="0" stroke="#B8630F" stroke-width="5" stroke-linecap="round"/>
-            <circle cx="8" cy="27" r="9" fill="#9C2B1F"/>
-            <circle cx="22" cy="17" r="9" fill="#E0A827"/>
-            <circle cx="36" cy="7" r="8" fill="#D97E1E"/>
-          </g>
-
-          <!-- bread loaf -->
-          <g transform="translate(255,178)">
-            <ellipse cx="20" cy="18" rx="26" ry="16" fill="#E0A827"/>
-            <path d="M0 18c4-10 12-14 20-14s16 4 20 14" stroke="#B8630F" stroke-width="2" fill="none" opacity="0.6"/>
-          </g>
-
-          <!-- counter shadow -->
-          <rect x="70" y="240" width="280" height="14" rx="7" fill="#E7D3B4"/>
-
-          <!-- little sun / spice swirl -->
-          <circle cx="360" cy="60" r="18" fill="url(#heroBowl)" opacity="0.85"/>
+          <!-- Trennlinie -->
+          <path d="M450 0v300" stroke="#1f2422" stroke-width="6" stroke-dasharray="16 12" />
         </svg>
       </div>
     </div>
   </section>
 
-  <!-- ÜBER UNS -->
-  <section id="ueber-uns">
-    <div class="container about-grid">
-      <div class="about-art" aria-hidden="true">
-        <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" role="img">
-          <rect width="400" height="400" fill="#FBF2E4"/>
-          <circle cx="200" cy="200" r="150" fill="url(#aboutGrad)"/>
-          <defs>
-            <linearGradient id="aboutGrad" x1="60" y1="60" x2="340" y2="340" gradientUnits="userSpaceOnUse">
-              <stop offset="0" stop-color="#E0A827"/>
-              <stop offset="0.55" stop-color="#D97E1E"/>
-              <stop offset="1" stop-color="#9C2B1F"/>
-            </linearGradient>
-          </defs>
-          <!-- crate of goods -->
-          <g transform="translate(90,210)">
-            <path d="M0 30 L220 30 L200 110 L20 110 Z" fill="#FFFDF9" opacity="0.92"/>
-            <path d="M0 30 L220 30 L210 55 L10 55 Z" fill="#F6E8D4"/>
-            <g stroke="#D9A521" stroke-width="4" opacity="0.7">
-              <line x1="30" y1="55" x2="18" y2="110"/>
-              <line x1="80" y1="55" x2="72" y2="110"/>
-              <line x1="130" y1="55" x2="128" y2="110"/>
-              <line x1="180" y1="55" x2="188" y2="110"/>
-            </g>
-          </g>
-          <!-- produce circles -->
-          <circle cx="140" cy="180" r="22" fill="#FBF2E4"/>
-          <circle cx="180" cy="160" r="16" fill="#9C2B1F"/>
-          <circle cx="215" cy="185" r="19" fill="#FFFDF9"/>
-          <circle cx="250" cy="155" r="14" fill="#E0A827"/>
-          <circle cx="255" cy="195" r="12" fill="#FBF2E4"/>
-        </svg>
+  <!-- ================= AN DER THEKE ================= -->
+  <section class="section counter" id="theke">
+    <div class="wrap counter-grid">
+      <div>
+        <p class="kicker">Seite eins</p>
+        <h2>An der Theke</h2>
+        <p>
+          Frisch zubereitet, schnell über den Tresen: die Gerichte, für die man
+          in der Mittagspause zwanzig Minuten hat. Was hier hervorsticht, ist
+          allerdings nichts vom Spieß.
+        </p>
       </div>
 
-      <div class="about-text">
-        <span class="eyebrow">Über uns</span>
-        <h2>Zwei Welten, ein Laden</h2>
-        <p>
-          Ezo Imbiss u. Lebensmittel liegt in der Rheinstraße im Freiburger Stadtteil Neuburg
-          und bringt zwei Dinge unter ein Dach: einen Imbiss für den schnellen, herzhaften Hunger
-          zwischendurch und ein kleines Lebensmittelgeschäft für den Einkauf des Alltags.
-        </p>
-        <p>
-          Ob eine warme Kleinigkeit für die Mittagspause oder frische Zutaten für zuhause –
-          hier trifft unkomplizierte Küche auf praktisches Einkaufen, mit kurzen Wegen und
-          persönlichem Kontakt.
-        </p>
-        <p>
-          Ein Ort für die Nachbarschaft ebenso wie für Laufkundschaft, die auf dem Weg
-          etwas Gutes sucht.
-        </p>
-      </div>
+      <ul class="dish-list">
+        <li class="is-signature">
+          <div>
+            <h3>Hausgemachte Sarma</h3>
+            <p>Gefüllte Blätter mit Reis und Gewürzen, aufgerollt und geschmort — Arbeit, die man einem Imbiss nicht zutraut und die deshalb hier zuerst steht.</p>
+          </div>
+          <span class="dish-tag">hausgemacht</span>
+        </li>
+        <li>
+          <div>
+            <h3>Döner &amp; Dürüm</h3>
+            <p>Der Klassiker im Brot oder gerollt im Fladen. Für die Mittagspause und für alle, die weiterlaufen wollen.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>Yufka</h3>
+            <p>Dünner gerollt, weniger Brot, mehr Füllung. Die Variante für alle, denen der Döner zu mächtig ist.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>Pide</h3>
+            <p>Aus dem Ofen, herzhaft belegt. Braucht ein paar Minuten länger und lohnt sie.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>Falafel &amp; Hummus</h3>
+            <p>Die pflanzliche Hälfte der Karte — nicht als Beilage gedacht, sondern als vollständige Bestellung.</p>
+          </div>
+          <span class="dish-tag tag-veg">vegetarisch</span>
+        </li>
+      </ul>
     </div>
   </section>
 
-  <!-- HIGHLIGHTS -->
-  <section id="highlights">
-    <div class="container">
+  <!-- ================= IM REGAL =================
+       Ein kleiner Lebensmittelladen erklärt sich nicht über sein
+       Sortiment, sondern über die Situationen, in denen man ihn
+       braucht. Deshalb hier vier Anlässe statt vier Warengruppen. -->
+  <section class="section shelf" id="regal">
+    <div class="wrap">
       <div class="section-head">
-        <span class="eyebrow">Angebot</span>
-        <h2>Was Ezo ausmacht</h2>
-        <p>Vom herzhaften Snack bis zum Griff ins Regal – zwei Angebote, die zusammengehören.</p>
+        <p class="kicker">Seite zwei</p>
+        <h2>Im Regal</h2>
+        <p class="section-note">
+          Kein Supermarkt und kein Ersatz für den Wocheneinkauf. Dafür die
+          Lösung für vier Situationen, die jeder kennt.
+        </p>
       </div>
 
-      <div class="cards">
-        <article class="card">
-          <div class="card-icon">
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 20l11-11M13 5l6 6M9 15l-4 4M15 5c1.5 1.5 4 1.5 4 4" stroke="#9C2B1F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-          <h3>Frische Snacks</h3>
-          <p>Döner, Dürüm und Yufka frisch zubereitet – ideal für die Mittagspause oder den Hunger zwischendurch.</p>
+      <div class="case-grid">
+        <article class="case">
+          <span class="c-no">01</span>
+          <h3>Das eine Gewürz fehlt</h3>
+          <p>Beim Kochen gemerkt, dass etwas fehlt. Der Weg hierher dauert kürzer als die Sauce köchelt.</p>
         </article>
-
-        <article class="card">
-          <div class="card-icon">
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 8h16l-1.5 11a2 2 0 0 1-2 1.8H7.5a2 2 0 0 1-2-1.8L4 8Z" stroke="#B8630F" stroke-width="2" stroke-linejoin="round"/><path d="M8 8V6a4 4 0 0 1 8 0v2" stroke="#B8630F" stroke-width="2"/></svg>
-          </div>
-          <h3>Lebensmittel-Sortiment</h3>
-          <p>Praktisches für den täglichen Einkauf – vom Grundnahrungsmittel bis zur kleinen Besonderheit, ohne Umwege.</p>
+        <article class="case">
+          <span class="c-no">02</span>
+          <h3>Fladenbrot für heute Abend</h3>
+          <p>Nicht abgepackt aus dem Regal, sondern das, was zum Essen passt, das gerade fertig wird.</p>
         </article>
-
-        <article class="card">
-          <div class="card-icon">
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3c3 3 6 6.5 6 10a6 6 0 0 1-12 0c0-3.5 3-7 6-10Z" stroke="#D97E1E" stroke-width="2" stroke-linejoin="round"/></svg>
-          </div>
-          <h3>Herzhafte Auswahl</h3>
-          <p>Pide, Falafel, Hummus und hausgemachte Sarma ergänzen den Döner-Klassiker – einfach und ehrlich zubereitet.</p>
+        <article class="case">
+          <span class="c-no">03</span>
+          <h3>Halb neun abends</h3>
+          <p>Wenn der Supermarkt schon zu ist. Hier ist bis 22 Uhr offen — sechs Tage die Woche.</p>
         </article>
-
-        <article class="card">
-          <div class="card-icon">
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z" stroke="#9C2B1F" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="9.5" r="2.4" stroke="#9C2B1F" stroke-width="2"/></svg>
-          </div>
-          <h3>Mitten in Freiburg</h3>
-          <p>Zentral im Stadtteil Neuburg an der Rheinstraße gelegen – gut erreichbar für Nachbarschaft und Laufkundschaft.</p>
+        <article class="case">
+          <span class="c-no">04</span>
+          <h3>Ohne Auto</h3>
+          <p>In Neuburg zu Fuß erreichbar. Ein Einkauf, für den man keinen Kofferraum braucht.</p>
         </article>
       </div>
+
+      <p class="shelf-note">
+        Das Sortiment reicht vom Grundnahrungsmittel bis zur kleinen
+        Besonderheit. Eine vollständige Warenliste steht hier bewusst nicht —
+        die ändert sich, und im Laden sieht man sie ohnehin besser.
+      </p>
     </div>
   </section>
 
-  <!-- KONTAKT -->
-  <section id="kontakt">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">Standort &amp; Kontakt</span>
-        <h2>Vorbeikommen oder schreiben</h2>
-        <p>Dieser Entwurf zeigt beispielhaft, wie eine Kontaktmöglichkeit für Ezo Imbiss u. Lebensmittel aussehen könnte.</p>
+  <!-- ================= BIS 22 UHR ================= -->
+  <section class="section late" id="spaet">
+    <div class="wrap late-grid">
+      <div>
+        <p class="kicker">Zeiten</p>
+        <h2>Neun bis zweiundzwanzig, sechs Tage</h2>
+        <p>
+          Dreizehn Stunden am Stück, ohne Mittagspause. Das ist der eigentliche
+          Grund, warum ein Laden wie dieser für ein Viertel wichtig ist: Er ist
+          dann da, wenn andere schon zu haben.
+        </p>
+        <p>
+          Sonntag ist geschlossen. Der einzige Tag, an dem man vorher planen muss.
+        </p>
       </div>
 
-      <div class="contact-grid">
-        <div class="contact-card">
-          <h3>
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z" stroke="#E0A827" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="9.5" r="2.4" stroke="#E0A827" stroke-width="2"/></svg>
-            Adresse
-          </h3>
-          <address>
-            Ezo Imbiss u. Lebensmittel<br>
-            Rheinstraße 17<br>
-            79104 Freiburg im Breisgau
-          </address>
-          <p class="contact-detail">
-            Telefon: <a class="tel-link" href="tel:+49761288283">0761 288283</a>
-          </p>
-          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Rheinstra%C3%9Fe+17%2C+Freiburg+im+Breisgau" target="_blank" rel="noopener">
-            Route auf Google Maps anzeigen
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-          <p class="contact-note" style="margin-top:14px;">
-            Öffnungszeiten: Mo–Sa 09:00–22:00 Uhr, So geschlossen.<br>
-            <span class="note-sub">Angaben laut Online-Branchenverzeichnissen, ohne Gewähr.</span>
-          </p>
-        </div>
-
-        <div class="contact-card">
-          <h3>
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 6h16v12H4z" stroke="#E0A827" stroke-width="2" stroke-linejoin="round"/><path d="m4 7 8 6 8-6" stroke="#E0A827" stroke-width="2" stroke-linejoin="round"/></svg>
-            Nachricht schreiben
-          </h3>
-          <p>Fragen zum Angebot oder ein einfaches Hallo – am liebsten per E-Mail.</p>
-          <a class="btn btn-primary" href="mailto:info@ezo-imbiss.de">
-            info@ezo-imbiss.de
-          </a>
-          <p class="placeholder-note" style="margin-top:14px;">
-            Platzhalter-Adresse für diesen Entwurf – im Live-Betrieb durch die echte Adresse ersetzen.
-          </p>
-        </div>
-      </div>
+      <ul class="hours-list" id="hoursList">
+        <li data-day="1"><span>Montag</span><em>9:00 – 22:00</em></li>
+        <li data-day="2"><span>Dienstag</span><em>9:00 – 22:00</em></li>
+        <li data-day="3"><span>Mittwoch</span><em>9:00 – 22:00</em></li>
+        <li data-day="4"><span>Donnerstag</span><em>9:00 – 22:00</em></li>
+        <li data-day="5"><span>Freitag</span><em>9:00 – 22:00</em></li>
+        <li data-day="6"><span>Samstag</span><em>9:00 – 22:00</em></li>
+        <li data-day="0" class="is-closed"><span>Sonntag</span><em>geschlossen</em></li>
+      </ul>
     </div>
   </section>
+
+  <!-- ================= KONTAKT ================= -->
+  <section class="section contact" id="kontakt">
+    <div class="wrap contact-grid">
+      <div>
+        <p class="kicker">Vorbeikommen</p>
+        <h2>Rheinstraße 17</h2>
+        <p class="section-note">
+          Im Stadtteil Neuburg, gut erreichbar für die Nachbarschaft und für
+          alle, die auf dem Weg sind.
+        </p>
+
+        <div class="contact-links">
+          <a class="contact-link" href="tel:+49761288283">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.5 4.5c.6-.6 1.6-.6 2.2 0l1.6 1.6c.5.5.6 1.3.2 1.9l-1 1.5c-.3.4-.3.9 0 1.3 1 1.4 2.3 2.7 3.7 3.7.4.3.9.3 1.3 0l1.5-1c.6-.4 1.4-.3 1.9.2l1.6 1.6c.6.6.6 1.6 0 2.2l-1 1c-.7.7-1.8 1-2.8.7-3-.9-5.7-2.6-7.9-4.8-2.2-2.2-3.9-4.9-4.8-7.9-.3-1 0-2.1.7-2.8l1-1Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+            <span><strong>0761 288283</strong><span>Vorbestellen und abholen</span></span>
+          </a>
+          <a class="contact-link" href="https://www.google.com/maps/search/?api=1&amp;query=Rheinstra%C3%9Fe%2017%2C%2079104%20Freiburg%20im%20Breisgau" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21c-5-5-8-8.6-8-12a8 8 0 0 1 16 0c0 3.4-3 7-8 12Z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="9" r="2.6" stroke="currentColor" stroke-width="1.6"/></svg>
+            <span><strong>Rheinstraße 17</strong><span>79104 Freiburg im Breisgau · Route planen</span></span>
+          </a>
+        </div>
+      </div>
+
+      <aside class="note-card">
+        <h3>Zu diesem Entwurf</h3>
+        <p>
+          Adresse, Telefonnummer, Öffnungszeiten und die Bewertung von 4,4 aus
+          247 Rezensionen stammen aus Online-Branchenverzeichnissen und sind
+          ohne Gewähr.
+        </p>
+        <p class="todo">
+          <strong>Vor dem Launch:</strong> Zeiten mit dem Laden bestätigen, eine
+          echte E-Mail-Adresse ergänzen und, wenn möglich, die Speisekarte mit
+          Preisen. Die bisher gezeigte Platzhalter-Adresse ist entfernt.
+        </p>
+      </aside>
+    </div>
+  </section>
+
 </main>
 
 <footer class="site-footer">
-  <div class="container">
-    <span>© 2026 Ezo Imbiss u. Lebensmittel</span>
-    <span class="draft-note">Website-Entwurf – unverbindlicher Gestaltungsvorschlag</span>
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <span class="brand-name">Ezo Imbiss u. Lebensmittel</span>
+      <p>Rheinstraße 17 · 79104 Freiburg im Breisgau (Neuburg)<br />Theke und Regal unter einem Dach. Mo–Sa 9 bis 22 Uhr.</p>
+    </div>
+    <nav class="footer-links" aria-label="Fußzeile">
+      <a href="#theke">An der Theke</a>
+      <a href="#regal">Im Regal</a>
+      <a href="#spaet">Öffnungszeiten</a>
+      <a href="tel:+49761288283">0761 288283</a>
+    </nav>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>&copy; <span id="year">2026</span> Ezo Imbiss u. Lebensmittel</span>
+    <span class="footer-note">Website-Entwurf, unverbindlicher Gestaltungsvorschlag. Angaben ohne Gewähr; Impressum und Datenschutzerklärung fehlen und sind vor einem echten Launch Pflicht.</span>
   </div>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
